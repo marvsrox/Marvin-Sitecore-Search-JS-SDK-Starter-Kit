@@ -8,7 +8,7 @@ import { AccordionFacets, CardViewSwitcher, Pagination, Select, SortSelect } fro
 
 import { LanguageContext } from '../../contexts/languageContext';
 import { DEFAULT_IMAGE, HIGHLIGHT_DATA } from '../../data/constants';
-import { HighlightComponent, getDescription } from '../utils';
+import { HighlightComponent, getBadge, getDescription } from '../utils';
 import {
   AccordionFacetsStyled,
   ArticleCardRowStyled,
@@ -232,7 +232,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
                                 navigate(`/detail/${a.id}`);
                               }}
                             >
-                              {a.title}
+                              {a.name}
                             </ArticleCardStyled.Link>
                           </ArticleCardStyled.Title>
                           <ArticleCardStyled.Subtitle>
@@ -243,7 +243,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
                               highlightElement={HIGHLIGHT_DATA.highlightTag}
                             />
                           </ArticleCardStyled.Subtitle>
-                          <ArticleCardStyled.Type>{a.type ? a.type : 'Unknown'}</ArticleCardStyled.Type>
+                          <ArticleCardStyled.Type>{getBadge(a.type)}</ArticleCardStyled.Type>
                         </ArticleCardStyled.Root>
                       ))}
                     </GridStyled>
@@ -264,7 +264,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
                                   navigate(`/detail/${a.id}`);
                                 }}
                               >
-                                {a.title}
+                                {a.name}
                               </ArticleCardRowStyled.Link>
                             </ArticleCardRowStyled.Title>
                             <ArticleCardRowStyled.Content>
@@ -275,7 +275,11 @@ export const SearchResultsWithLayoutOptionComponent = ({
                                 highlightElement={HIGHLIGHT_DATA.highlightTag}
                               />
                             </ArticleCardRowStyled.Content>
-                            <ArticleCardRowStyled.Type>{a.type ? a.type : 'Unknown'}</ArticleCardRowStyled.Type>
+                            <ArticleCardRowStyled.Type>
+                              <ArticleCardRowStyled.Badge className={a.type.toLowerCase()}>
+                                {a.type}
+                              </ArticleCardRowStyled.Badge>
+                            </ArticleCardRowStyled.Type>
                           </ArticleCardRowStyled.Right>
                         </ArticleCardRowStyled.Root>
                       ))}

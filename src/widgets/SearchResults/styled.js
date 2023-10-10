@@ -91,6 +91,18 @@ const ArticleCardRowTypeStyled = styled(ArticleCard.Id)`
   font-weight: bold;
 `;
 
+const ArticleCardRowBadgeTypeStyled = styled.span`
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 12px;
+
+  &.news {
+    background-color: blue;
+  }
+`;
+
 const ArticleCardRowLinkStyled = styled(Link)`
   text-decoration: none;
   color: ${theme.vars.palette.primary.contrastText};
@@ -106,6 +118,7 @@ const ArticleCardRowLinkStyled = styled(Link)`
 export const ArticleCardRowStyled = {
   Link: ArticleCardRowLinkStyled,
   Type: ArticleCardRowTypeStyled,
+  Badge: ArticleCardRowBadgeTypeStyled,
   Content: ArticleCardRowContentStyled,
   Image: ArticleCardRowImageStyled,
   Title: ArticleCardRowTitleStyled,

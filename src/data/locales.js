@@ -1,5 +1,5 @@
 export default {
-  en: { country: 'us', language: 'en' },
+  en: { country: 'au', language: 'en' },
   es: { country: 'es', language: 'es' },
   de: { country: 'de', language: 'de' },
   it: { country: 'it', language: 'it' },

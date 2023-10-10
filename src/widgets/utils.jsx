@@ -7,6 +7,16 @@ export const getDescription = (article, key) => {
   return article[key] || '';
 };
 
+export const getBadge = (articleType) => {
+  
+  let cssClass = "badge-";
+  cssClass = articleType? cssClass + articleType : cssClass + "default";
+  
+  return (
+    <span className={cssClass}>Badge Test</span>
+  );
+}
+
 export const HighlightComponent = ({
   text,
   preSeparator,
