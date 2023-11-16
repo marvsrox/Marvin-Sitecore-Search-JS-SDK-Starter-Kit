@@ -12,7 +12,7 @@ const HomeHeroWidget = () => {
     },
   } = useQuestions({
     state: {
-      keyphrase: 'What is XM cloud',
+      keyphrase: 'When are shark populations healthiest',
       relatedQuestions: 3,
     },
   });

@@ -1,8 +1,7 @@
 import { FilterEqual, WidgetDataType, useSearchResults, widget } from '@sitecore-search/react';
 
 import { Row } from '../../components/Common';
-import { getContentIcon } from '../../components/Icons';
-import { ArticleCard, ArticleCardContent, ArticleCardImage } from './styled';
+import { ArticleCard, ArticleCardContent } from './styled';
 
 export const HomeHighlightedComponent = () => {
   const {
@@ -19,8 +18,9 @@ export const HomeHighlightedComponent = () => {
       {articlesToShow.map((a, index) => (
         <ArticleCard key={`${a.id}-${index}`}>
           <ArticleCardContent>
-            <ArticleCardImage>{getContentIcon(a.type)}</ArticleCardImage>
-            <h3>{a.name}</h3>
+            <img src={a.image_url} width="100%" />
+            {/* <ArticleCardImage>{getContentIcon(a.type)}</ArticleCardImage> */}
+            <h3><a href={a.url}>{a.name}</a></h3>
             <span>{a.subtitle}</span>
           </ArticleCardContent>
         </ArticleCard>

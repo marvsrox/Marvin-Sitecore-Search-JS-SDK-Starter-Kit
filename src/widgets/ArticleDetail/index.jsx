@@ -18,21 +18,24 @@ export const ArticleDetailComponent = ({ id }) => {
     queryResult: { data: { content: articles = [] } = {} },
   } = useSearchResults((query) => {
     const equalFilter = new FilterEqual('id', id);
-    console.log(equalFilter.toJson());
     query.getRequest().setSearchFilter(equalFilter);
     return {
       itemsPerPage: 1,
     };
   });
-  let mainArticle = { id: '', title: '' };
+
+
+  let mainArticle = { id: '', name: '' };
   if (articles.length > 0) {
+
+    console.log(articles);
     mainArticle = articles[0];
   }
   return (
     <DetailWrapper ref={widgetRef}>
       <DetailHeader>
         <DetailHeaderContent>
-          <DetailHeaderTitle>{mainArticle.title}</DetailHeaderTitle>
+          <DetailHeaderTitle>{mainArticle.name}</DetailHeaderTitle>
         </DetailHeaderContent>
         <DetailHeaderContent>
           <DetailHeaderImage src={mainArticle.image_url || mainArticle.image || DEFAULT_IMAGE} />

@@ -24,6 +24,10 @@ export const ArticleCardContent = styled.div`
     width: 100%;
     height: 30px;
     color: #000;
+
+    a {
+      color: rgb(0, 48, 135);
+    }
   }
   span {
     width: 100%;

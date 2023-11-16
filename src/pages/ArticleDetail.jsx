@@ -5,7 +5,11 @@ import ArticleDetailWidget from '../widgets/ArticleDetail/index.jsx';
 
 const ArticleDetail = () => {
   const { id } = useParams();
-  return <ArticleDetailWidget key={id} id={id} rfkId="rfkid_7" />;
+  return (
+    <div>
+      <ArticleDetailWidget key={id} id={id} rfkId="rfkid_7" />
+    </div>
+  );
 };
 
 export default withPageTracking(ArticleDetail, PAGE_EVENTS_PDP);

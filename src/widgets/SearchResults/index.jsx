@@ -243,7 +243,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
                               highlightElement={HIGHLIGHT_DATA.highlightTag}
                             />
                           </ArticleCardStyled.Subtitle>
-                          <ArticleCardStyled.Type>{getBadge(a.type)}</ArticleCardStyled.Type>
+                          <ArticleCardStyled.Type>{getBadge(a.type)} - </ArticleCardStyled.Type>
                         </ArticleCardStyled.Root>
                       ))}
                     </GridStyled>

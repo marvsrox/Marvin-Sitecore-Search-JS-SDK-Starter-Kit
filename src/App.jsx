@@ -11,7 +11,7 @@ import { ThemeContext } from './contexts/theme-context.js';
 import locales from './data/locales.js';
 import useStorage from './hooks/useStorage.js';
 import ArticleDetail from './pages/ArticleDetail.jsx';
-import Home from './pages/Home.jsx';
+import Home from './pages/Home';
 import Search from './pages/Search.jsx';
 import { GlobalStyle } from './styled.js';
 import darkTheme from './themes/dark.json';
