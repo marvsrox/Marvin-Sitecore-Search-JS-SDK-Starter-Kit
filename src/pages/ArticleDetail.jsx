@@ -5,6 +5,8 @@ import ArticleDetailWidget from '../widgets/ArticleDetail/index.jsx';
 
 const ArticleDetail = () => {
   const { id } = useParams();
+
+  console.log("Page ID:" + id)
   return (
     <div>
       <ArticleDetailWidget key={id} id={id} rfkId="rfkid_7" />

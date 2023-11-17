@@ -13,16 +13,20 @@ import {
 import PropTypes from 'prop-types';
 
 export const ArticleDetailComponent = ({ id }) => {
+  const equalFilter = new FilterEqual('id', id);
   const {
     widgetRef,
     queryResult: { data: { content: articles = [] } = {} },
-  } = useSearchResults((query) => {
-    const equalFilter = new FilterEqual('id', id);
-    query.getRequest().setSearchFilter(equalFilter);
-    return {
+  } = useSearchResults({
+    query: (query) => {
+    query
+    .getRequest()
+    .setSearchFilter(equalFilter)
+  },
+    state: {
       itemsPerPage: 1,
-    };
-  });
+  },
+});
 
 
   let mainArticle = { id: '', name: '' };
