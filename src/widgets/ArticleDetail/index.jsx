@@ -31,8 +31,6 @@ export const ArticleDetailComponent = ({ id }) => {
 
   let mainArticle = { id: '', name: '' };
   if (articles.length > 0) {
-
-    console.log(articles);
     mainArticle = articles[0];
   }
   return (

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { PageController, trackEntityPageViewEvent, trackPageViewEvent } from '@sitecore-search/react';
 
-import { ENTITY_CONTENT, PAGE_EVENTS_DEFAULT, PAGE_EVENTS_PDP } from '../data/constants';
+import { ENTITY_CONTENT, PAGE_EVENTS_DEFAULT, PAGE_EVENTS_ENTITY_PAGE } from '../data/constants';
 import useUri from '../hooks/useUri';
 
 export const PageEventContext = React.createContext({});
@@ -16,14 +16,13 @@ const withPageTracking =
   (Component, pageType = PAGE_EVENTS_DEFAULT) =>
     function InnerComponent(props) {
       const uri = useUri();
-      const [searchParams] = useSearchParams();
-      const id = searchParams.get('id');
-
+      const { id } = useParams();
+      
       useEffect(() => {
         PageController.getContext().setPageUri(uri);
-
-        if (id && pageType === PAGE_EVENTS_PDP) {
-          trackEntityPageViewEvent(ENTITY_CONTENT, [{ id }]);
+        if (id && pageType === PAGE_EVENTS_ENTITY_PAGE) {
+          console.log(id);
+          trackEntityPageViewEvent(ENTITY_CONTENT, {items : [{ id: id }]});
         } else {
           trackPageViewEvent(pageType);
         }

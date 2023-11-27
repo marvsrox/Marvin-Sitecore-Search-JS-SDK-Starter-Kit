@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { PAGE_EVENTS_PDP } from '../data/constants';
+import { PAGE_EVENTS_ENTITY_PAGE } from '../data/constants';
 import withPageTracking from '../hocs/withPageTracking.jsx';
 import ArticleDetailWidget from '../widgets/ArticleDetail/index.jsx';
 
@@ -14,4 +14,4 @@ const ArticleDetail = () => {
   );
 };
 
-export default withPageTracking(ArticleDetail, PAGE_EVENTS_PDP);
+export default withPageTracking(ArticleDetail, PAGE_EVENTS_ENTITY_PAGE);
