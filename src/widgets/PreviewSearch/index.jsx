@@ -160,6 +160,8 @@ export const PreviewSearchComponent = ({ defaultProductsPerPage = 6 }) => {
         content: articles = [],
         suggestion: {
           title_context_aware: articleSuggestions = [],
+          title_edit_distance: spellingSuggestions = [],
+          title_sort_by_attribute: commonSearchSuggestions =[],
         } = {},
       } = {},
     },
@@ -173,7 +175,7 @@ export const PreviewSearchComponent = ({ defaultProductsPerPage = 6 }) => {
         .setSearchQueryHighlightPostTag(HIGHLIGHT_DATA.post);
     },
     state: {
-      suggestionsList: [{ suggestion: 'title_context_aware', max: 10 }],
+      suggestionsList: [{ suggestion: 'title_context_aware', max: 10 }, { suggestion: 'title_edit_distance', max: 10 }, { suggestion: 'title_sort_by_attribute', max: 10 }],
         itemsPerPage: defaultProductsPerPage,
         keyphrase: '',
     },
@@ -238,7 +240,7 @@ export const PreviewSearchComponent = ({ defaultProductsPerPage = 6 }) => {
             {!loading && (
               <NavMenuStyled.SubContent orientation="vertical" value={activeItem} ref={widgetRef}>
                 <NavMenuStyled.GroupList>
-                  {articleSuggestions.length > 0 && (
+                  {(articleSuggestions.length > 0 && (
                     <Group
                       groupTitle="Suggestions"
                       groupId="keyphrase"
@@ -248,7 +250,29 @@ export const PreviewSearchComponent = ({ defaultProductsPerPage = 6 }) => {
                       onActiveItem={setActiveItem}
                       resetItem={() => setValue('')}
                     />
-                  )}
+                  )) || 
+                  (spellingSuggestions.length > 0 && (
+                    <Group
+                      groupTitle="Did you mean?"
+                      groupId="keyphrase"
+                      articles={spellingSuggestions}
+                      onItemClick={onItemClick}
+                      activeItem={activeItem}
+                      onActiveItem={setActiveItem}
+                      resetItem={() => setValue('')}
+                    />
+                  )) ||
+                  (commonSearchSuggestions.length > 0 && (
+                    <Group
+                      groupTitle="Suggestions"
+                      groupId="keyphrase"
+                      articles={commonSearchSuggestions}
+                      onItemClick={onItemClick}
+                      activeItem={activeItem}
+                      onActiveItem={setActiveItem}
+                      resetItem={() => setValue('')}
+                    />
+                  ))}
                   <NavMenuStyled.DefaultGroup value="defaultArticlesResults" key="defaultArticlesResults">
                     <NavMenuStyled.DefaultTrigger aria-hidden />
                     <Articles articles={articles} onItemClick={onItemClick} />
