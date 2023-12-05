@@ -202,6 +202,7 @@ const ArticleNameStyled = styled(ArticleCard.Title)`
   overflow: hidden;
   margin: 0 0 ${theme.vars.spacing?.m};
   font-family: ${theme.vars.typography?.fontFamilySystem};
+  color: ${theme.vars.palette?.primary?.contrastText};
   font-size: 0.8rem;
   font-weight: ${theme.vars.typography?.fontSize4?.fontWeight};
 `;
