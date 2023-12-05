@@ -8,6 +8,7 @@ import {
   CardViewSwitcher,
   FacetItem,
   Pagination,
+  SearchResultsAccordionFacets,
   Select,
   SortSelect,
   theme,
@@ -508,7 +509,7 @@ const AccordionFacetsFacetStyled = styled(AccordionFacets.Facet)`
   border-bottom: solid 1px ${theme.vars.palette.grey['400']};
 `;
 
-const AccordionFacetsRootStyled = styled(AccordionFacets.Root)``;
+const AccordionFacetsRootStyled = styled(SearchResultsAccordionFacets)``;
 
 export const AccordionFacetsStyled = {
   Trigger: AccordionTriggerStyled,
