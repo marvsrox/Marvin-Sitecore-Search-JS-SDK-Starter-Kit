@@ -1,24 +1,24 @@
 export default [
   {
     value: 'en',
-    label: 'United Kingdom',
+    label: 'United Kingdom English',
   },
-  // {
-  //   value: 'es',
-  //   label: 'Español',
-  // },
-  // {
-  //   value: 'de',
-  //   label: 'Deutsch',
-  // },
+  {
+    value: 'de',
+    label: 'Germany Deutsch',
+  },
   // {
   //   value: 'it',
   //   label: 'Italiano',
   // },
-  // {
-  //   value: 'fr',
-  //   label: 'Français',
-  // },
+  {
+    value: 'fr',
+    label: 'France Français',
+  },
+  {
+    value: 'es',
+    label: 'Spain Español',
+  },
   // {
   //   value: 'zh',
   //   label: '中文',
