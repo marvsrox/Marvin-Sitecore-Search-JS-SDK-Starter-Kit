@@ -7,10 +7,6 @@ export default [
     value: 'de',
     label: 'Germany Deutsch',
   },
-  // {
-  //   value: 'it',
-  //   label: 'Italiano',
-  // },
   {
     value: 'fr',
     label: 'France Français',
@@ -19,16 +15,4 @@ export default [
     value: 'es',
     label: 'Spain Español',
   },
-  // {
-  //   value: 'zh',
-  //   label: '中文',
-  // },
-  // {
-  //   value: 'da',
-  //   label: 'Dansk',
-  // },
-  // {
-  //   value: 'ja',
-  //   label: '日本語 ',
-  // },
 ];

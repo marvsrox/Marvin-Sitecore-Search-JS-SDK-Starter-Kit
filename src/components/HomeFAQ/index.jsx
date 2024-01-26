@@ -9,7 +9,8 @@ const HomeHero = () => {
       <FAQBackground />
       <HTMBlockWidget rfkId="faqs_title" />
       <FAQContent>
-        <HomeHeroWidget rfkId="rfkid_qa" />
+        <HomeHeroWidget rfkId="search_home_faqs" />
+        {/* <HomeHeroWidget rfkId="rfkid_qa" /> */}
       </FAQContent>
     </FAQPageSection>
   );

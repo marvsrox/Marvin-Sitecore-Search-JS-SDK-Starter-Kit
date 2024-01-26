@@ -12,7 +12,8 @@ const HomeHeroWidget = () => {
     },
   } = useQuestions({
     state: {
-      keyphrase: 'When are shark populations healthiest',
+      //keyphrase: 'When are shark populations healthiest',
+      keyphrase: 'How to invest',
       relatedQuestions: 3,
     },
   });

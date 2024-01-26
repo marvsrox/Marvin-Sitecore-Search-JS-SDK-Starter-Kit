@@ -9,7 +9,7 @@ export const HomeHighlightedComponent = () => {
     queryResult: { data: { content: articles = [] } = {} },
   } = useSearchResults({
     query: (query) => {
-      query.getRequest().setSearchFilter(new FilterEqual('type', 'News'));
+      query.getRequest().setSearchFilter(new FilterEqual('type', 'Insights'));
     },
   });
   const articlesToShow = articles.slice(0, 3);
@@ -21,7 +21,8 @@ export const HomeHighlightedComponent = () => {
             <img src={a.image_url} width="100%" />
             {/* <ArticleCardImage>{getContentIcon(a.type)}</ArticleCardImage> */}
             <h3><a href={a.url}>{a.name}</a></h3>
-            <span>{a.subtitle}</span>
+            <br/>
+            <span>{a.description}</span>
           </ArticleCardContent>
         </ArticleCard>
       ))}
