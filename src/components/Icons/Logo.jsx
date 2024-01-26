@@ -1,6 +1,6 @@
 const Logo = () => {
   return (
-	<img src="https://www.uwa.edu.au/-/media/project/uwa/uwa/masterbrand/core-elements/logo-uwa-horz-full-blue.svg?iar=0&hash=C40B3EF72840C156774B7D4276D2352D" alt="UWA Logo" />
+  <img src="https://www.jupiteram.com/uploads/2021/02/43d9c338afdea037ee7a922e0cec377a/jupiter_logo_cmyk_pos.svg" width="35%" alt="Jupiter Logo" />
   );
 };
 

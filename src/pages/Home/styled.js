@@ -19,7 +19,7 @@ export const HeroRow = styled.div`
 export const HeroWrapper = styled.div`
   max-width: 1920px;
   margin: auto;
-  background-image: url(https://www.uwa.edu.au/-/media/project/uwa/uwa/global/hero-images/domestic-recruitment---homepage-hero--1920_x_432.jpg?w=1440&hash=4D8C2A37A704376CD61ABD116AF68B3E);
+  background-image: url(https://www.jupiteram.com/uploads/2021/02/ef3dabf070582bc171434c2e6dbdd2a1/jupiter_spark_gi-129747532_hires_1600x600px.jpg);
   min-height: 324px;
   height: 324px;
   background-position: center center;
