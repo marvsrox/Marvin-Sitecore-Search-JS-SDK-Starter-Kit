@@ -220,13 +220,15 @@ export const SearchResultsWithLayoutOptionComponent = ({
                           </ArticleCardStyled.ImageWrapper>
                           <ArticleCardStyled.Title>
                             <ArticleCardStyled.Link
-                              title={a.title}
-                              to={`/detail/${a.id}`}
-                              onClick={(e) => {
-                                e.preventDefault();
-                                onItemClick({ id: a.id || '', index });
-                                navigate(`/detail/${a.id}`);
-                              }}
+                              title={a.name}
+                              target='_blank'
+                              to={`${a.url}`}
+                              // to={`/detail/${a.id}`}
+                              // onClick={(e) => {
+                              //   e.preventDefault();
+                              //   onItemClick({ id: a.id || '', index });
+                              //   navigate(`/detail/${a.id}`);
+                              // }}
                             >
                               {a.name} 
                             </ArticleCardStyled.Link>
@@ -253,12 +255,15 @@ export const SearchResultsWithLayoutOptionComponent = ({
                           <ArticleCardRowStyled.Right>
                             <ArticleCardRowStyled.Title>
                               <ArticleCardRowStyled.Link
-                                to={`/detail/${a.id}`}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  onItemClick({ id: a.id || '', index });
-                                  navigate(`/detail/${a.id}`);
-                                }}
+                                //to={`/detail/${a.id}`}
+                                to={`${a.url}`}
+                                target='_blank'
+                                // onClick={(e) => {
+                                //   e.preventDefault();
+                                //   onItemClick({ id: a.id || '', index });
+                                //   // navigate(`/detail/${a.id}`);
+                                //   navigate(`${a.url}`);
+                                // }}
                               >
                                 {a.name}
                               </ArticleCardRowStyled.Link>
