@@ -1,5 +1,10 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+        <loc>https://www.jupiteram.com/ksys-document-library/services/documents/retrieveDocument/?token=4ff7aa78-fe0a-40d0-9396-2f7653735e89&amp;clientCode=f92527e3d4599dd5824de5e82cd2f4c4fda401ef&amp;filename=Jupiter%20Global%20Sustainable%20Equities%20Fund%20Jupiter%20Global%20Sustainable%20Equities%20Fund%20UT%20Annual%20Report.pdf</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://www.jupiteram.com/ksys-document-library/services/documents/retrieveDocument/?token=4ff7aa78-fe0a-40d0-9396-2f7653735e89&amp;clientCode=b0003ffb228cb0ed6f338b86b2a63018771f1609&amp;filename=Chrysalis%20Investments%20Limited%20Chrysalis%20Investments%20Limited%20Factsheet.pdf</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
