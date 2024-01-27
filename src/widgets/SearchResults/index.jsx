@@ -222,7 +222,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
                             <ArticleCardStyled.Link
                               title={a.name}
                               target='_blank'
-                              to={`${a.url}`}
+                              to={`${a.url}?sitecorecampaign=marvin123`}
                               // to={`/detail/${a.id}`}
                               // onClick={(e) => {
                               //   e.preventDefault();
@@ -256,8 +256,8 @@ export const SearchResultsWithLayoutOptionComponent = ({
                             <ArticleCardRowStyled.Title>
                               <ArticleCardRowStyled.Link
                                 //to={`/detail/${a.id}`}
-                                to={`${a.url}`}
                                 target='_blank'
+                                to={`${a.url}?sitecorecampaign=marvin123`}
                                 // onClick={(e) => {
                                 //   e.preventDefault();
                                 //   onItemClick({ id: a.id || '', index });
