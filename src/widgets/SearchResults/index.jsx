@@ -68,7 +68,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
     query
     .getRequest()
     .setSearchQueryHighlightFragmentSize(500)
-    .setSearchQueryHighlightFields(['subtitle', 'description'])
+    .setSearchQueryHighlightFields(['name', 'description'])
     .setSearchQueryHighlightPreTag(HIGHLIGHT_DATA.pre)
     .setSearchQueryHighlightPostTag(HIGHLIGHT_DATA.post);
   },
@@ -228,12 +228,12 @@ export const SearchResultsWithLayoutOptionComponent = ({
                                 navigate(`/detail/${a.id}`);
                               }}
                             >
-                              {a.name}
+                              {a.name} 
                             </ArticleCardStyled.Link>
                           </ArticleCardStyled.Title>
                           <ArticleCardStyled.Subtitle>
                             <HighlightComponent
-                              text={getDescription(a, 'subtitle')}
+                              text={getDescription(a, 'name')}
                               preSeparator={HIGHLIGHT_DATA.pre}
                               postSeparator={HIGHLIGHT_DATA.post}
                               highlightElement={HIGHLIGHT_DATA.highlightTag}
