@@ -20,7 +20,7 @@ export const HomeHighlightedComponent = () => {
           <ArticleCardContent>
             <img src={a.image_url} width="100%" />
             {/* <ArticleCardImage>{getContentIcon(a.type)}</ArticleCardImage> */}
-            <h3><a href={a.url}>{a.name}</a></h3>
+            <h3><a href={a.url}>{a.name.substring(0,60)}...</a></h3>
             <br/>
             <span>{a.description}</span>
           </ArticleCardContent>
