@@ -257,7 +257,7 @@ export const SearchResultsWithLayoutOptionComponent = ({
                               <ArticleCardRowStyled.Link
                                 //to={`/detail/${a.id}`}
                                 target='_blank'
-                                to={`${a.url}?sitecorecampaign=marvin123`}
+                                to={`${a.url}?utm_source=sitecoresearch`}
                                 // onClick={(e) => {
                                 //   e.preventDefault();
                                 //   onItemClick({ id: a.id || '', index });
